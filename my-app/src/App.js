@@ -8,9 +8,11 @@ function App() {
       <nav>
         <h1> Word Search</h1>
       </nav>
+      <div className="center">
+        <Board />
+        <Keyboard />
+      </div>
 
-      <Board />
-      <Keyboard />
     </div>
   );
 }
