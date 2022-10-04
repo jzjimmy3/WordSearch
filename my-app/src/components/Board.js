@@ -1,12 +1,15 @@
 import React from 'react';
 import '../App.css';
 import Letter from './Letter';
-// import Letter from './Letter';
+import Grid from './Grid';
 
+// makeGrid(3, 3);
+// console.log("1");
 function Board() {
     return (
-        <div className="board">
-            <div className="row">
+        <div id="grid-container">
+            {/* <Grid /> */}
+            {/* <div className="row">
                 <Letter />
                 <Letter />
                 <Letter />
@@ -40,10 +43,8 @@ function Board() {
                 <Letter />
                 <Letter />
                 <Letter />
-            </div>
-
+            </div> */}
         </div>
-
     )
 }
 
