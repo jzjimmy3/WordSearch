@@ -61,8 +61,10 @@ nav {
 
 #grid-container {
   display: grid;
+  /* grid-template-rows: auto; */
   grid-template-rows: repeat(var(--grid-rows), auto);
   grid-template-columns: repeat(var(--grid-cols), auto);
+
   height: 500px;
   width: 500px;
   display: inline-grid;

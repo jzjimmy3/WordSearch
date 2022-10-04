@@ -9,10 +9,11 @@ function App() {
       <nav>
         <h1> Word Search</h1>
       </nav>
-      <div className="center" id="grid-container">
-        {Grid(3, 3)}
-        <Keyboard />
+      <div id="grid-container">
+        {Grid(20, 20)}
       </div>
+      {/* <Keyboard /> */}
+
 
     </div>
   );
