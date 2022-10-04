@@ -8,7 +8,6 @@
   background-color: #121212;
   width: 100vw;
   height: 100vh;
-  /* display: flex; */
   color: white;
 }
 
@@ -67,9 +66,8 @@ nav {
   width: 500px;
   display: inline-grid;
   grid-gap: 1px;
-  border: 5px solid #52b043;
+  border: 1px solid black;
   border-radius: 2px;
-  box-shadow: 0 0 30px #52b043;
 }
 
 .grid-item {
