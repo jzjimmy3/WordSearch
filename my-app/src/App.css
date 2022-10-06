@@ -56,7 +56,6 @@ nav {
   /* grid-template-rows: auto; */
   grid-template-rows: repeat(var(--grid-rows), auto);
   grid-template-columns: repeat(var(--grid-cols), auto);
-
   height: 500px;
   width: 500px;
   display: inline-grid;
@@ -66,7 +65,7 @@ nav {
 }
 
 .grid-item {
-  padding: 0.5em;
+  padding: 0.001em;
   border: 1px solid white;
   /* background: white; */
 }
@@ -98,4 +97,26 @@ nav {
 
 #big {
   width: 100px;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchBar .input {
+  margin-top: 10px;
+  padding-left: 2.375rem;
+  width: 526px;
+  height: 34px;
+  border-radius: 20px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(240, 235, 236);
+  height: 40px;
+}
+
+.searchBar .input:hover {
+  display: flex;
 }

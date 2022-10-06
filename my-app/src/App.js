@@ -2,6 +2,7 @@ import './App.css';
 import Board from './components/Board';
 import Keyboard from './components/Keyboard';
 import Grid from './components/Grid';
+import SearchBar from './components/SearchBar';
 
 function App() {
   return (
@@ -10,8 +11,9 @@ function App() {
         <h1> Word Search</h1>
       </nav>
       <div className="board " id="grid-container">
-        {Grid(5, 5)}
+        {Grid(50, 50)}
       </div>
+      <SearchBar />
       <Keyboard />
     </div >
   );
