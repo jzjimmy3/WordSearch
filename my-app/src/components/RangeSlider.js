@@ -9,13 +9,13 @@ function RangeSlider(size) {
       <input
         type="range"
         min="2"
-        max="5"
+        max="22"
         onChange={({ target: { value: radius } }) => {
           onChange(radius);
         }}
       />
-      <Grid rows={2} cols={2} />
-      <div className="buble">{value}</div>
+      <Grid rows={value} cols={value} />
+      <div>Grid Size: {value}</div>
     </div>
   );
 }

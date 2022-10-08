@@ -123,9 +123,6 @@ nav {
   display: flex;
 }
 
-.slideParent {
-  position: relative;
-}
-.buble {
-  position: absolute;
+.sliderParent {
+  position: left;
 }

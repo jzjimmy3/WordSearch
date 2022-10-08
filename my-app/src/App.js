@@ -3,6 +3,9 @@ import Keyboard from "./components/Keyboard";
 import Grid from "./components/Grid";
 import SearchBar from "./components/SearchBar";
 import RangeSlider from "./components/RangeSlider";
+import React, { useState, createContext, useEffect } from "react";
+
+export const AppContext = createContext();
 
 function App() {
   const onClearBoard = () => {
@@ -18,10 +21,12 @@ function App() {
         <h1> Word Search</h1>
       </nav>
       <div className="board " id="grid-container"></div>
-      {/* <Grid rows={7} cols={7} /> */}
-      <SearchBar />
-      <RangeSlider />
-      <Keyboard />
+
+      <AppContext.Provider value={{ onClearBoard }}>
+        <SearchBar />
+        <RangeSlider />
+        <Keyboard />
+      </AppContext.Provider>
     </div>
   );
 }

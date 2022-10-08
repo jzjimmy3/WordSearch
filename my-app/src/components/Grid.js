@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../App.css";
 import { useRef, useEffect } from "react";
 import "../App.js";
+import { AppContext } from "../App";
 
 export default function Grid(props) {
   const gridLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
+  const { onClearBoard } = useContext(AppContext);
   const ref = useRef(null);
   useEffect(() => {
-    // onClearBoard();
+    onClearBoard();
     const container = document.getElementById("grid-container");
     container.style.setProperty("--grid-cols", props.cols);
     container.style.setProperty("--grid-rows", props.rows);
