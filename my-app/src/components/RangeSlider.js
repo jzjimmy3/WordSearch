@@ -3,15 +3,15 @@ import "../App.css";
 import Grid from "./Grid";
 
 function RangeSlider(size) {
-  const [value, onChange] = useState(2);
+  const [value, onChange] = useState(30);
   return (
     <div className="sliderParent">
       <input
         type="range"
-        min="2"
-        max="22"
-        onChange={({ target: { value: radius } }) => {
-          onChange(radius);
+        min="10"
+        max="35"
+        onChange={({ target: { value: val } }) => {
+          onChange(val);
         }}
       />
       <Grid rows={value} cols={value} />
