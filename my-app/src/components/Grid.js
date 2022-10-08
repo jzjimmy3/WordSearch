@@ -1,16 +1,18 @@
 import React from "react";
 import "../App.css";
 import { useRef, useEffect } from "react";
+import "../App.js";
 
-export default function Grid(rows, cols) {
+export default function Grid(props) {
   const gridLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
   const ref = useRef(null);
   useEffect(() => {
+    // onClearBoard();
     const container = document.getElementById("grid-container");
-    container.style.setProperty("--grid-cols", cols);
-    container.style.setProperty("--grid-rows", rows);
-    for (var i = 0; i < rows * cols; i++) {
+    container.style.setProperty("--grid-cols", props.cols);
+    container.style.setProperty("--grid-rows", props.rows);
+    for (var i = 0; i < props.rows * props.cols; i++) {
       const grid = document.createElement("div");
       const text = (grid.textContent = gridLetters.charAt(
         Math.floor(Math.random() * 26)

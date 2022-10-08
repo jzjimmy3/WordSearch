@@ -123,6 +123,9 @@ nav {
   display: flex;
 }
 
-/* .gridLetter {
-  color: red;
-} */
+.slideParent {
+  position: relative;
+}
+.buble {
+  position: absolute;
+}
