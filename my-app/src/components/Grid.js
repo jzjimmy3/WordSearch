@@ -8,6 +8,7 @@ export default function Grid(props) {
   const gridLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   const { onClearBoard } = useContext(AppContext);
   const ref = useRef(null);
+
   useEffect(() => {
     onClearBoard();
     const container = document.getElementById("grid-container");
