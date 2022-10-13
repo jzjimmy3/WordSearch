@@ -12,13 +12,12 @@ export default function Grid(props) {
     onClearBoard();
     const container = document.getElementById("grid-container");
     for (var i = 0; i < props.rows; i++) {
-      const createDiv = document.createElement("div");
       container.appendChild(document.createElement("div")).className =
-        "grid-item";
+        "gridRow";
       for (var j = 0; j < props.cols; j++) {
         const createDiv = document.createElement("div");
-        const getElement = document.getElementsByClassName("grid-item")[i];
-        getElement.appendChild(createDiv).className = "grid-col";
+        const getElement = document.getElementsByClassName("gridRow")[i];
+        getElement.appendChild(createDiv).className = "gridCol";
         getElement.childNodes[j].textContent = gridLetters.charAt(
           Math.floor(Math.random() * 26)
         );

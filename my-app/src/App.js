@@ -1,6 +1,4 @@
 import "./App.css";
-import Keyboard from "./components/Keyboard";
-import Grid from "./components/Grid";
 import SearchBar from "./components/SearchBar";
 import RangeSlider from "./components/RangeSlider";
 import React, { useState, createContext, useEffect } from "react";
@@ -9,7 +7,7 @@ export const AppContext = createContext();
 
 function App() {
   const onClearBoard = () => {
-    var elements = document.getElementsByClassName("grid-item");
+    var elements = document.getElementsByClassName("gridRow");
     while (elements.length > 0) {
       elements[0].parentNode.removeChild(elements[0]);
     }
@@ -25,7 +23,6 @@ function App() {
       <AppContext.Provider value={{ onClearBoard }}>
         <SearchBar />
         <RangeSlider />
-        <Keyboard />
       </AppContext.Provider>
     </div>
   );
