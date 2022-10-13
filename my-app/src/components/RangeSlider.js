@@ -3,7 +3,7 @@ import "../App.css";
 import Grid from "./Grid";
 
 function RangeSlider(size) {
-  const [value, onChange] = useState(30);
+  const [value, onChange] = useState(10);
   return (
     <div className="sliderParent">
       <input
