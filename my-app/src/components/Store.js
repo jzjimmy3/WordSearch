@@ -7,18 +7,17 @@ export const GlobalStoreContext = React.createContext({});
 
 export const useGlobalStore = () => {
   //   const teamMembersNames = ['John', 'Mary', 'Jason', 'David']
-  const [gridSize, setGridSize] = useState(10);
+  const [gridSize, setGridSize] = useState(3);
 
   const store = {
-    gridSize: [gridSize, setGridSize],
+    gridSizeL: [gridSize, setGridSize],
   };
 
   return (
-    <div>
-      <SearchBar gridSize={gridSize} />
-      <RangeSlider setGridSize={setGridSize} />
-    </div>
-
-    // store
+    // <div>
+    //   <SearchBar gridSize={gridSize} />
+    //   <RangeSlider setGridSize={setGridSize} />
+    // </div>
+    store
   );
 };

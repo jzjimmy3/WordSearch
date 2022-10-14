@@ -5,12 +5,12 @@ import { GlobalStoreContext } from "./Store.js";
 
 export var val = 2;
 export default function RangeSlider({ setGridSize }) {
-  var { gridSize } = React.useContext(GlobalStoreContext);
+  var { gridSizeL } = React.useContext(GlobalStoreContext);
   const [value, setValue] = useState(20);
 
   const rangeHandler = ({ target: { value: val } }) => {
     setValue(val);
-    setGridSize = 5;
+    gridSizeL.gridSize = val;
   };
 
   return (
