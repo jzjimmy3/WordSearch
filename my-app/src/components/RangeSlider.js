@@ -1,16 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import "../App.css";
 import Grid from "./Grid";
 import { GlobalStoreContext } from "./Store.js";
 
-export var val = 2;
-export default function RangeSlider({ setGridSize }) {
-  var { gridSizeL } = React.useContext(GlobalStoreContext);
+export default function RangeSlider() {
+  var { gridSize } = useContext(GlobalStoreContext);
   const [value, setValue] = useState(20);
 
   const rangeHandler = ({ target: { value: val } }) => {
     setValue(val);
-    gridSizeL.gridSize = val;
+    gridSize.gridSize = val;
   };
 
   return (

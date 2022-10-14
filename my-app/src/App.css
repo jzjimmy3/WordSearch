@@ -96,3 +96,7 @@ nav {
 .searchBar .input:hover {
   display: flex;
 }
+
+.selected {
+  background-color: orange;
+}
