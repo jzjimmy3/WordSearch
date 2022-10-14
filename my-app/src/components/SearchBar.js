@@ -4,14 +4,17 @@ import { GlobalStoreContext } from "./Store";
 function SearchBar() {
   const { gridSize } = React.useContext(GlobalStoreContext);
   const search = (e) => {
+    e.target.value = e.target.value.toUpperCase();
     for (var i = 0; i < gridSize.gridSize; i++) {
       for (var j = 0; j < gridSize.gridSize; j++) {
         const elements =
           document.getElementsByClassName("gridRow")[i].childNodes[j];
-        if (elements.textContent === e.target.value) {
-          // elements.style.background = "red";
-          elements.classList.add("selected");
-          // elements.classList.remove("gridCol");
+        var searchBarArray = e.target.value.split("");
+        console.log(searchBarArray);
+        for (var k = 0; k < searchBarArray.length; k++) {
+          if (elements.textContent === searchBarArray[k]) {
+            elements.classList.add("selected");
+          }
         }
       }
     }
@@ -19,7 +22,7 @@ function SearchBar() {
 
   const handleKeyDown = (e) => {
     if (e.key === "Backspace") {
-      console.log("Backspace key pressed");
+      console.log("Deleted");
     }
   };
   return (
