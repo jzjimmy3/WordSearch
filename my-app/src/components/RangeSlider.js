@@ -14,7 +14,7 @@ export default function RangeSlider() {
 
   return (
     <div className="sliderParent">
-      <input type="range" min="10" max="15" onChange={rangeHandler} />
+      <input type="range" min="10" max="20" onChange={rangeHandler} />
       <Grid rows={value} cols={value} />
       <div>Grid Size: {value}</div>
     </div>

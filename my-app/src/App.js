@@ -2,7 +2,6 @@ import "./App.css";
 import SearchBar from "./components/SearchBar";
 import RangeSlider from "./components/RangeSlider";
 import React, { useState, createContext, useEffect } from "react";
-import SearchButton from "./components/SearchButton";
 
 export const AppContext = createContext();
 
