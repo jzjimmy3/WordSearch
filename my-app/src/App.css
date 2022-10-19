@@ -64,17 +64,6 @@ nav {
   font-size: 1vh;
 }
 
-.line1,
-.line2,
-.line3 {
-  flex: 33%;
-  display: flex;
-  flex-direction: row;
-  display: flex;
-  justify-content: center;
-  margin: 5px;
-}
-
 .searchBar {
   display: flex;
   align-items: center;
