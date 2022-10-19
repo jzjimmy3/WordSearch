@@ -7,7 +7,7 @@ export const useGlobalStore = () => {
   const [gridSize, setGridSize] = useState(10);
 
   const store = {
-    gridSize: [gridSize, setGridSize],
+    grid: [gridSize, setGridSize],
   };
 
   return (
